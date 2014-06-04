@@ -161,13 +161,13 @@ def execute(stockId, date):
 
 		cr = csv.reader(response)
 		    
-		''' Expected format in each row:
-		['1823', '9A9x  \xa5\xc3\xc2\xd7\xaa\xf7\xae\xe7\xb6\xe9', '124.50', '0', '2,000', '', '1824', '9A9x  \xa5\xc3\xc2\xd7\xaa\xf7\xae\xe7\xb6\xe9', '127.50', '0', '110']
+		''' Expected format example in each row:
+		['1823', '1020  合庫', '124.50', '0', '2,000', '', '1824', '1020  合庫', '127.50', '0', '110']
 		'''    
 		for row in cr:
   		        x=0
 
-  		        if len(row)>10:
+  		        if len(row)>10: # 11 columns in total
     		            name1 = row[1]
     		            buy1 = row[3]
     		            buy1 = buy1.replace(",","")
@@ -185,9 +185,9 @@ def execute(stockId, date):
 
     		            try: # in order to skip the beginning few lines of header
 				''' header format example:
-				['\xa8\xe9\xb0\xd3\xb6R\xbd\xe6\xc3\xd2\xa8\xe9\xa6\xa8\xa5\xe6\xbb\xf9\xb6q\xb8\xea\xb0T']
-				['\xc3\xd2\xa8\xe9\xa5N\xbdX', '3293']
-				['\xa7\xc7\xb8\xb9', '\xa8\xe9\xb0\xd3', '\xbb\xf9\xae\xe6', '\xb6R\xb6i\xaa\xd1\xbc\xc6', '\xbd\xe6\xa5X\xaa\xd1\xbc\xc6', '', '\xa7\xc7\xb8\xb9', '\xa8\xe9\xb0\xd3', '\xbb\xf9\xae\xe6', '\xb6R\xb6i\xaa\xd1\xbc\xc6', '\xbd\xe6\xa5X\xaa\xd1\xbc\xc6']
+				['券商買賣證券成交價量資訊']
+				['證券代碼', '3293']
+				['序號','券商','價格','買進股數','賣出股數','','序號','券商','價格','買進股數','賣出股數']
 				'''
        			        str(int(buy1))
        			        str(int(buy2))
