@@ -59,7 +59,7 @@ example:
 
 # Output example
 
-:: 以3293 0603為例  (後半段省略, 完整請見example_output.txt)
+:: 以3293 0603為例  (後半段省略, 完整請見 [example_output.txt] (https://github.com/paullo0106/stocktw/blob/master/example_output.txt) )
 
         Sum  |  Total Buy  |   Buy Cost  | Total Sell  |  Sell Cost  |   Avg Cost | Agent          
        96.0  |       96.0  |     135.84  |        0.0  |        0.0  |     135.84 | 5858  統一嘉義 
