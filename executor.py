@@ -136,8 +136,7 @@ def retry(ExceptionToCheck, tries=4, delay=3, backoff=2, logger=None):
 
 @retry(Exception,tries=3)
 def collectOTCData(stockId,date):
-	top_n = "100000" # default as a big number to get all the rows
-	url = 'http://www.gretai.org.tw/ch/stock/aftertrading/broker_trading/download_BRKRBSCSV.php?curstk='+stockId+'&fromw=0&numbern=10000&stk_date='+date
+	url = 'http://www.gretai.org.tw/web/stock/aftertrading/broker_trading/download_ALLCSV.php?curstk='+stockId+'&stk_date='+date
 	response = urllib2.urlopen(url)
 	return response
 
